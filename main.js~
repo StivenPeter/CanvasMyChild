@@ -1,0 +1,15 @@
+var c = document.getElementByID("slate")
+var ctx=c.getContext("2d")
+
+var makeRectangle(x, y, w, h){
+    ctx.fillStyle = "#ff0000"
+    ctx.fillRect(x,y,w,h)
+}
+
+function getCursorPosition(canvas, event) {
+    var rect = canvas.getBoundingClientRect();
+    var x = event.clientX - rect.left;
+    var y = event.clientY - rect.top;
+    console.log("x: " + x + " y: " + y);
+}
+
